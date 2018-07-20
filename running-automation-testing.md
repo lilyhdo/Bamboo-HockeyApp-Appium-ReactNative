@@ -145,7 +145,7 @@ echo -n <your username>:<your api-key> | base64
 2. Use encoded base64 from above in curl commands, like below
 
 ```
-curl -X GET https://api.kobiton.com/v1/sessions \
+curl -X GET https://api.kobiton.com/v1/sessions 
   -H 'Authorization: Basic dGVzdHVzZXI6MTIzZWQtMTIzZmFjLTkxMzdkY2E='
   -H 'Accept: application/json'
 ```
@@ -158,7 +158,7 @@ GET /sessions{sessionId}
 ```
 To make a request:
 ```
-curl -X GET https://api.kobiton.com/v1/sessions/{sessionId} \
+curl -X GET https://api.kobiton.com/v1/sessions/{sessionId}
   -H 'Authorization: Basic dGVzdHVzZXI6MTIzZWQtMTIzZmFjLTkxMzdkY2E='
   -H 'Accept: application/json'
 ```
@@ -175,7 +175,7 @@ GET /sessions/{sessionId}/commands
 To make a request:
 
 ```Shell
-curl -X GET https://api.kobiton.com/v1/sessions/{sessionId}/commands \
+curl -X GET https://api.kobiton.com/v1/sessions/{sessionId}/commands
   -H 'Authorization: Basic dGVzdHVzZXI6MTIzZWQtMTIzZmFjLTkxMzdkY2E='
   -H 'Accept: application/json'
 
