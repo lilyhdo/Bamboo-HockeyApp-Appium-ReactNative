@@ -2,7 +2,7 @@
 
 ## 1. Prepare Kobiton configuration for executing automation testing
 
-* #### Username 
+**Username**
 1. Go to https://portal.kobiton.com/
 2. In the upper right hand corner, click on your name and in the drop down menu, click on Profile. 
 
@@ -20,11 +20,16 @@
 
 * #### Desired caps
 1. In the navigation bar at the top of the Kobiton website, select Devices. 
+
+![devices](assets/devices.png)
+
 2. Hover over any device and click on the Automation settings button (the gear symbol). 
 
-![automation](assets/automation.png)
+![automation-gear](assets/automation-gear.png)
 
-3. On the left hand side, you can select your preferred language, as well as any other variables you would like to adjust, such as **App Type**, **Device Group**, and **Orientation**. Adjusting the settings on the left side will affect the desiredCaps, which you can find in the right side of the window. 
+3. On the left hand side, you can select your preferred language, as well as any other variables you would like to adjust, such as **App Type**, **Device Group**, and **Orientation**. 
+
+> Note: Adjusting the settings on the left side will affect the desiredCaps, which you can find in the right side of the window. 
 
 ![automation-settings](assets/automationsettings.png)
 
@@ -33,6 +38,10 @@
 For examples of automation tests, go to https://github.com/kobiton/samples . 
 
 Choose a language for your test script, and decide whether you want to test on Android or iOS, and either do a web test or an app test. Make sure in the code you specify your Kobiton username, API key, and information under desiredCaps. 
+
+In the below Node.JS script example, you can see the indicated fields and replace the information with your own. 
+
+![sample](assets/sample.png)
 
 ## 3. Setup Bamboo
 
@@ -100,7 +109,15 @@ Click 'Save'.
 
 ### Build
 
-Click on 'Create' to start your first build. 
+Once you are done editing, you can click on the 'Run' button near the top right corner of the screen. 
+
+![run-plan](assets/run-plan.png)
+
+To edit your plan after a build, you can click on your job near the top of the screen, next to where it says 'Build dashboard'. 
+
+![edit-plan](assets/go-to-job.png)
+
+### Troubleshooting
 
 If your build is a failure, you can check the "Logs" tab. 
 
@@ -109,22 +126,6 @@ If your build is a failure, you can check the "Logs" tab.
 To see further details on the log, click on 'Default Job'. 
 
 ![default-job](assets/default-job.png)
-
-To edit your plan, you can click on it near the top of the screen, next to where it says 'Build dashboard'. 
-
-![go-to-job](assets/go-to-job.png)
-
-Then click on the edit pencil icon on the right side of the plan you wish to edit. 
-
-![edit-plan](assets/edit-plan.png)
-
-Now you can select any job you want to edit. 
-
-![select-job](assets/select-job.png)
-
-Once you are done editing, you can click on the 'Run' button near the top right corner of the screen. 
-
-![run-plan](assets/run-plan.png)
 
 If your build was successful, check Kobiton cloud devices to see if a test session was created. 
 
@@ -152,10 +153,8 @@ curl -X GET https://api.kobiton.com/v1/sessions
 
 Below are necessary Kobiton Rest API endpoints that you may need.
 
-- Get session info
-```
-GET /sessions{sessionId}
-```
+### Authorization
+
 To make a request:
 ```
 curl -X GET https://api.kobiton.com/v1/sessions/{sessionId}
@@ -163,12 +162,17 @@ curl -X GET https://api.kobiton.com/v1/sessions/{sessionId}
   -H 'Accept: application/json'
 ```
 
+### Get session info
+```
+GET /sessions{sessionId}
+```
+
 With this line of code, you can print the session information to the console. 
 ```javascript
 console.log(sessionCapabilities)
 ```
 
-- Get session commands
+### Commands
 ```
 GET /sessions/{sessionId}/commands
 ```
