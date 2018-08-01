@@ -109,13 +109,17 @@ Click 'Save'.
 
 ### Build
 
-Once you are done editing, you can click on the 'Run' button near the top right corner of the screen. 
+Once you are done editing, click on 'Create' to start your first build. 
 
-![run-plan](assets/run-plan.png)
+![create](assets/create.png)
+
+Your build will now run. 
+
+![build](assets/build.png)
 
 To edit your plan after a build, you can click on your job near the top of the screen, next to where it says 'Build dashboard'. 
 
-![edit-plan](assets/go-to-job.png)
+![edit-plan](assets/go-job.png)
 
 ### Troubleshooting
 
@@ -125,7 +129,7 @@ If your build is a failure, you can check the "Logs" tab.
 
 To see further details on the log, click on 'Default Job'. 
 
-![default-job](assets/default-job.png)
+![default-job](assets/defaultjob.png)
 
 If your build was successful, check Kobiton cloud devices to see if a test session was created. 
 
@@ -169,8 +173,13 @@ GET /sessions{sessionId}
 
 With this line of code, you can print the session information to the console. 
 ```javascript
+const sessionCapabilities = await driver.sessionCapabilities()
 console.log(sessionCapabilities)
 ```
+
+The output should look something like below:
+
+![session-information](assets/session-information.png)
 
 ### Commands
 ```
