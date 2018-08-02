@@ -47,7 +47,7 @@ In the below Node.JS script example, you can see the indicated fields and replac
 
 ### Installation
 
-Download Bamboo from https://www.atlassian.com/software/bamboo. Follow their [installion guide](https://confluence.atlassian.com/bamboo/getting-started-with-bamboo-289277283.html?_ga=2.95849887.246880307.1531709232-1995250601.1528082340). 
+Download Bamboo from https://www.atlassian.com/software/bamboo. Follow their [installation guide](https://confluence.atlassian.com/bamboo/getting-started-with-bamboo-289277283.html?_ga=2.95849887.246880307.1531709232-1995250601.1528082340). 
 
 ### Create a project
 
@@ -115,19 +115,15 @@ Once you are done editing, click on 'Create' to start your first build.
 
 Your build will now run. 
 
-![build](assets/build.png)
+![building](assets/building.png)
 
-To edit your plan after a build, you can click on your job near the top of the screen, next to where it says 'Build dashboard'. 
+To edit your plan after a build, you can click on your job near the top of the screen, next to where it says 'Build dashboard' to return to your job configurations. 
 
 ![edit-plan](assets/go-job.png)
 
 ### Troubleshooting
 
-If your build is a failure, you can check the "Logs" tab. 
-
-![failure](assets/failure.png)
-
-To see further details on the log, click on 'Default Job'. 
+If your build is a failure, you can check the "Logs" tab. To see further details on the log, click on 'Default Job'. 
 
 ![default-job](assets/defaultjob.png)
 
