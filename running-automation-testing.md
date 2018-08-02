@@ -167,10 +167,11 @@ curl -X GET https://api.kobiton.com/v1/sessions/{sessionId}
 GET /sessions{sessionId}
 ```
 
-With this line of code, you can print the session information to the console. 
+To make a request: 
 ```javascript
-const sessionCapabilities = await driver.sessionCapabilities()
-console.log(sessionCapabilities)
+curl -X GET https://api.kobiton.com/v1/sessions/{sessionId} 
+  -H 'Authorization: Basic dGVzdHVzZXI6MTIzZWQtMTIzZmFjLTkxMzdkY2E='
+  -H 'Accept: application/json'
 ```
 
 The output should look something like below:
