@@ -9,7 +9,7 @@ If you are a company developing an app and you use:
 - Appium to write the automation test
 - ReactNative to write the app
 
-The guidelines in this repo will show you how to use Bamboo to automatically build your app on HockeyApp and how to run automation tests with Kobiton. 
+Kobiton is a mobile cloud platform that enables users to perform manual or automated testing on iOS and Android devices. This guide will demonstrate how to configure Bamboo to get the latest build on HockeyApp and run Appium automation tests on Kobiton Test Cloud service.
 
 ## Table of Contents
 
