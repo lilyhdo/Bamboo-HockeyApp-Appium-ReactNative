@@ -43,31 +43,7 @@ In the below Node.JS script example, you can see the indicated fields and replac
 
 ![sample](assets/sample.png)
 
-## 3. Setup Bamboo
-
-### Installation
-
-Download Bamboo from https://www.atlassian.com/software/bamboo. Follow their [installation guide](https://confluence.atlassian.com/bamboo/getting-started-with-bamboo-289277283.html?_ga=2.95849887.246880307.1531709232-1995250601.1528082340). 
-
-### Create a project
-
-1) Login to Bamboo. In the top navigation bar, hover over the 'Create' dropdown menu and select 'Create Project'. 
-
-![create-project](assets/create-project.png)
-
-2) Fill out the information about the project. 
-
-![config-proj](assets/config-proj.png)
-
-3) Create a new plan for your project. 
-
-![create-plan](assets/create-plan.png)
-
-4) Fill out the information about the plan. and click on 'Configure plan' when finished. 
-
-![configure-plan](assets/configure-plan.png)
-
-> Note: If you link to a GitHub repository and you use two-factor authentication, you must generate a personal access token in GitHub to use as the password
+## 3. Run automation script
 
 ### Create task to run automation test
 
