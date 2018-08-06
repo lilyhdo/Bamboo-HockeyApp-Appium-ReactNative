@@ -19,4 +19,3 @@ This guideline will show you how to execute tests on Kobiton devices through a t
 
 2. The [second guideline](integrate-bamboo-github-hockeyapp) will show us how to integrate Kobiton cloud testing to the latest app build in our pipeline. 
 
-3. The [third guideline](third-guideline) will show us how to get our test session information with the Kobiton API. 
