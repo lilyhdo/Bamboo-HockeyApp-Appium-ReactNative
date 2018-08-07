@@ -15,7 +15,7 @@ Kobiton is a mobile cloud platform that enables users to perform manual or autom
 
 This guideline will show you how to execute tests on Kobiton devices through a task in Bamboo. 
 
-1. The [first guideline](running-automation-testing.md) will show us how to integrate Bamboo with HockeyApp. 
+1. The [first guideline](integrate-bamboo-github.md) will show us how to setup Bamboo configuration. 
 
-2. The [second guideline](integrate-bamboo-github-hockeyapp) will show us how to integrate Kobiton cloud testing to the latest app build in our pipeline. 
+2. The [second guideline](running-automation-testing.md) will show us how to integrate Kobiton cloud testing to the latest app build in our pipeline. 
 
