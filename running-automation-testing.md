@@ -1,8 +1,26 @@
 # Running automation test with Kobiton
 
+## Table of contents
+- [1. Prepare Kobiton configuration for executing automation testing](#1.-Prepare-Kobiton-configuration-for-executing-automation-testing)
+    - [Username](#Username)
+    - [API key](#API-key)
+    - [Desired caps](#Desired-caps)
+- [2. Write the automation test script](#2.-Write-the-automation-test-script)
+- [3. Run automation script on Bamboo](#3.-Run-automation-script-on-Bamboo)
+    - [Create task to run automation test](#Create-task-to-run-automation-test)
+      - [First task: npm install](#First-task:-npm-install)
+      - [Second task: run automation script](#Second-task:-run-automation-script)
+    - [Build](#Build)
+    - [Troubleshooting](#Troubleshooting)
+- [4. Get the automation session data through Kobiton REST API](4.-Get-the-automation-session-data-through-Kobiton-REST-API)
+    - [Authorization](#Authorization)
+    - [Get session info](#Get-session-info)
+    - [Commands](#Commands)
+    - [Final Result](#Final-Result)
+
 ## 1. Prepare Kobiton configuration for executing automation testing
 
-**Username**
+#### Username
 1. Go to https://portal.kobiton.com/
 2. In the upper right hand corner, click on your name and in the drop down menu, click on Profile. 
 
@@ -12,13 +30,13 @@
 
 ![username](assets/username.png)
 
-* #### API key
+#### API key
 1. Click on your name in the upper righthand corner again and select settings. 
 2. You should be able to find your API key under 'API Keys'. 
 
 ![api-key](assets/apikey.png)
 
-* #### Desired caps
+#### Desired caps
 1. In the navigation bar at the top of the Kobiton website, select Devices. 
 
 ![devices](assets/devices.png)
@@ -43,13 +61,13 @@ In the below Node.JS script example, you can see the indicated fields and replac
 
 ![sample](assets/sample.png)
 
-## 3. Run automation script
+## 3. Run automation script on Bamboo
 
 ### Create task to run automation test
 
 #### First task: npm install
 
-Now that we have created the plan, we must now configure a job. 
+On your project plan, configure a new job. 
 
 ![config-job](assets/config-job.png)
 
@@ -105,7 +123,7 @@ If your build is a failure, you can check the "Logs" tab. To see further details
 
 If your build was successful, check Kobiton cloud devices to see if a test session was created. 
 
-## Get the automation session data through Kobiton REST API
+## 4. Get the automation session data through Kobiton REST API
 
 - Update test result to session (https://api.kobiton.com/docs/#update-session-information)
 
@@ -167,8 +185,8 @@ curl -X GET https://api.kobiton.com/v1/sessions/{sessionId}/commands
 
 ```
 To get to a certain page in your commands, add the page number to the commands URL. For example:
-```javascript
-`https://api-test.kobiton.com/v1/sessions/${sessionId}/commands?page=2`
+```shell
+https://api.kobiton.com/v1/sessions/${sessionId}/commands?page=2
 ```
 
 > For more details on how to retrieve information about your session, go to https://api.kobiton.com/docs/

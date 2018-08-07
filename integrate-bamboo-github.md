@@ -1,5 +1,11 @@
 # Bamboo Integration
 
+## Table of contents
+- [1. Setup Bamboo](#1.-Setup-Bamboo)
+    - [Installation](#Installation)
+    - [Create a project](#Create-a-project-and-link-to-GitHub)
+
+
 ## 1. Setup Bamboo
 
 ### Installation
@@ -8,26 +14,6 @@ Download Bamboo from https://www.atlassian.com/software/bamboo. Follow their [in
 
 ### Create a project and link to GitHub
 
-1) Login to Bamboo. In the top navigation bar, hover over the 'Create' dropdown menu and select 'Create Project'. 
+Setup your first project. You may reference [this guideline](https://www.360logica.com/blog/how-to-create-and-run-your-first-project-in-bamboo/) for more details. 
 
-![create-project](assets/create-project.png)
-
-2) Fill out the information about the project. 
-
-![config-proj](assets/config-proj.png)
-
-3) Create a new plan for your project. 
-
-![create-plan](assets/create-plan.png)
-
-4) Fill out the information about the plan and link your GitHub repository. Click on 'Configure plan' when finished. 
-
-![configure-plan](assets/configure-plan.png)
-
-> Note: If you link to a GitHub repository and you use two-factor authentication, you must generate a personal access token in GitHub to use as the password
-
-<!-- ## 2. Auto build in Bamboo
-
-To deploy to HockeyApp from Bamboo, follow [this guide](https://www.atlassian.com/blog/archives/continuous-deployment-mobile-apps).
-
-Once your app has been built, download the latest build so we can use Kobiton to test on it.  -->
+Now that you have created a project and plan, you can now start configuring tasks. In the [next guideline](running-automation-testing.md), we will configure tasks that will allow us to run an automation test with Kobiton. 
