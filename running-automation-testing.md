@@ -1,22 +1,22 @@
 # Running automation test with Kobiton
 
 ## Table of contents
-- [1. Prepare Kobiton configuration for executing automation testing](#1.-Prepare-Kobiton-configuration-for-executing-automation-testing)
-    - [Username](#Username)
-    - [API key](#API-key)
-    - [Desired caps](#Desired-caps)
-- [2. Write the automation test script](#2.-Write-the-automation-test-script)
-- [3. Run automation script on Bamboo](#3.-Run-automation-script-on-Bamboo)
-    - [Create task to run automation test](#Create-task-to-run-automation-test)
-      - [First task: npm install](#First-task:-npm-install)
-      - [Second task: run automation script](#Second-task:-run-automation-script)
-    - [Build](#Build)
-    - [Troubleshooting](#Troubleshooting)
-- [4. Get the automation session data through Kobiton REST API](4.-Get-the-automation-session-data-through-Kobiton-REST-API)
-    - [Authorization](#Authorization)
-    - [Get session info](#Get-session-info)
-    - [Commands](#Commands)
-    - [Final Result](#Final-Result)
+- [1. Prepare Kobiton configuration for executing automation testing](#1-prepare-kobiton-configuration-for-executing-automation-testing)
+    - [Username](#username)
+    - [API key](#api-key)
+    - [Desired caps](#desired-caps)
+- [2. Write the automation test script](#2-write-the-automation-test-script)
+- [3. Run automation script on Bamboo](#3-run-automation-script-on-bamboo)
+    - [Create task to run automation test](#create-task-to-run-automation-test)
+      - [First task: npm install](#first-task-npm-install)
+      - [Second task: run automation script](#second-task-run-automation-script)
+    - [Build](#build)
+    - [Troubleshooting](#troubleshooting)
+- [4. Get the automation session data through Kobiton REST API](#4-get-the-automation-session-data-through-kobiton-rest-api)
+    - [Authorization](#authorization)
+    - [Get session info](#get-session-info)
+    - [Commands](#commands)
+    - [Final Result](#final-Result)
 
 ## 1. Prepare Kobiton configuration for executing automation testing
 
