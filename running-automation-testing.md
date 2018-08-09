@@ -7,11 +7,11 @@
     - [Desired caps](#desired-caps)
 - [2. Write the automation test script](#2-write-the-automation-test-script)
 - [3. Run automation script on Bamboo](#3-run-automation-script-on-bamboo)
-    - [Create task to run automation test](#create-task-to-run-automation-test)
+    - [3.1 Create task to run automation test](#3-1-create-task-to-run-automation-test)
       - [First task: npm install](#first-task-npm-install)
       - [Second task: run automation script](#second-task-run-automation-script)
-    - [Build](#build)
-    - [Troubleshooting](#troubleshooting)
+    - [3.2 Execute automation test](#3-2-execute-automation-test)
+    - [3.3 Troubleshooting](#3-3-troubleshooting)
 - [4. Get the automation session data through Kobiton REST API](#4-get-the-automation-session-data-through-kobiton-rest-api)
     - [Authorization](#authorization)
     - [Get session info](#get-session-info)
@@ -63,7 +63,7 @@ In the below Node.JS script example, you can see the indicated fields and replac
 
 ## 3. Run automation script on Bamboo
 
-### Create task to run automation test
+### 3.1 Create task to run automation test
 
 #### First task: npm install
 
@@ -71,9 +71,9 @@ On your project plan, configure a new job.
 
 ![config-job](assets/config-job.png)
 
-Click on 'Add task'. 
+Click on 'Add task'. In this guideline, we will be running the NodeJS test script so our first task will be to install the npm dependencies we need for our script.
 
-In this guideline, we will be running the NodeJS test script, so we need to select the task type 'npm'. 
+Select the task type 'npm'. 
 
 ![npm-task](assets/npm-task.png)
 
@@ -101,13 +101,13 @@ If necessary, you can click on 'Advanced options' and provide environment variab
 
 Click 'Save'. 
 
-### Build
+### 3.2 Execute automation script
 
 Once you are done editing, click on 'Create' to start your first build. 
 
 ![create](assets/create.png)
 
-Your build will now run. 
+Your build will now run and execute your automation script on a Kobiton device.
 
 ![building](assets/building.png)
 
@@ -115,7 +115,7 @@ To edit your plan after a build, you can click on your job near the top of the s
 
 ![edit-plan](assets/go-job.png)
 
-### Troubleshooting
+### 3.3 Troubleshooting
 
 If your build is a failure, you can check the "Logs" tab. To see further details on the log, click on 'Default Job'. 
 
