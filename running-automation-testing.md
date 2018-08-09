@@ -2,21 +2,12 @@
 
 ## Table of contents
 - [1. Prepare Kobiton configuration for executing automation testing](#1-prepare-kobiton-configuration-for-executing-automation-testing)
-    - [Username](#username)
-    - [API key](#api-key)
-    - [Desired caps](#desired-caps)
 - [2. Write the automation test script](#2-write-the-automation-test-script)
 - [3. Run automation script on Bamboo](#3-run-automation-script-on-bamboo)
-    - [3.1 Create task to run automation test](#3-1-create-task-to-run-automation-test)
-      - [First task: npm install](#first-task-npm-install)
-      - [Second task: run automation script](#second-task-run-automation-script)
-    - [3.2 Execute automation test](#3-2-execute-automation-test)
-    - [3.3 Troubleshooting](#3-3-troubleshooting)
+    - [3.1 Create task to run automation test](#31-create-task-to-run-automation-test)
+    - [3.2 Execute automation script](#32-execute-automation-script)
+    - [3.3 Accessing Logs](#33-accessing-ogs)
 - [4. Get the automation session data through Kobiton REST API](#4-get-the-automation-session-data-through-kobiton-rest-api)
-    - [Authorization](#authorization)
-    - [Get session info](#get-session-info)
-    - [Commands](#commands)
-    - [Final Result](#final-Result)
 
 ## 1. Prepare Kobiton configuration for executing automation testing
 
@@ -55,15 +46,19 @@
 
 For examples of automation tests, go to https://github.com/kobiton/samples . 
 
-Choose a language for your test script, and decide whether you want to test on Android or iOS, and either do a web test or an app test. Make sure in the code you specify your Kobiton username, API key, and information under desiredCaps. 
+Choose a language for your test script, and decide whether you want to test on Android or iOS, and either do a web test or an app test. Make sure in the script you specify your Kobiton username, API key, and desiredCaps, which we retrieved in the previous section. 
 
 In the below Node.JS script example, you can see the indicated fields and replace the information with your own. 
 
 ![sample](assets/sample.png)
 
+> For more information on automation testing with Kobiton, visit [this link](https://docs.kobiton.com/automation-testing/automation-testing-with-kobiton/).
+
 ## 3. Run automation script on Bamboo
 
 ### 3.1 Create task to run automation test
+
+Bamboo projects provide dozens of task types that allow you to execute an action. In this guideline, we will be running the NodeJS test script so we will use task type `npm` to install the needed dependencies and then execute our test script. 
 
 #### First task: npm install
 
@@ -71,7 +66,7 @@ On your project plan, configure a new job.
 
 ![config-job](assets/config-job.png)
 
-Click on 'Add task'. In this guideline, we will be running the NodeJS test script so our first task will be to install the npm dependencies we need for our script.
+Click on 'Add task'. 
 
 Select the task type 'npm'. 
 
@@ -89,21 +84,21 @@ Click 'Save'.
 
 #### Second task: run automation script
 
-Add another task of type 'npm'. 
+Add another task of type `npm`. 
 
-In the 'Node.js executable' section, make sure the executable is the same as the 'npm install' task we created previously. 
+In the `Node.js executable` section, make sure the executable is the same as the `npm install` task we created previously. 
 
 For the command, run your automation script. 
 
-If necessary, you can click on 'Advanced options' and provide environment variables. 
+If necessary, you can click on `Advanced options` and provide environment variables. 
 
 ![run-task](assets/run-task.png)
 
-Click 'Save'. 
+Click 'Save'. Our two tasks necessary for running an automation test on Kobiton are ready and we can start a build. 
 
 ### 3.2 Execute automation script
 
-Once you are done editing, click on 'Create' to start your first build. 
+Once you are done editing, click on `Create` to start your first build. 
 
 ![create](assets/create.png)
 
@@ -111,13 +106,9 @@ Your build will now run and execute your automation script on a Kobiton device.
 
 ![building](assets/building.png)
 
-To edit your plan after a build, you can click on your job near the top of the screen, next to where it says 'Build dashboard' to return to your job configurations. 
+### 3.3 Accessing Logs
 
-![edit-plan](assets/go-job.png)
-
-### 3.3 Troubleshooting
-
-If your build is a failure, you can check the "Logs" tab. To see further details on the log, click on 'Default Job'. 
+After a build, you can check the "Logs" tab to see your test output. To see further details on the log, click on 'Default Job'. 
 
 ![default-job](assets/defaultjob.png)
 
