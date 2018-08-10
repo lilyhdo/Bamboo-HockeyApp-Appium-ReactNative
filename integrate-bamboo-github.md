@@ -2,7 +2,7 @@
 
 ## Table of contents
 - [Prerequisites](#prerequisites)
-- [Create a project](#create-a-project-and-link-to-gitHub)
+- [Create a plan](#create-a-plan-and-link-to-gitHub)
 
 ### Prerequisites
 
