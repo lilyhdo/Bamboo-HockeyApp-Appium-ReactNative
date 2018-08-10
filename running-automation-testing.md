@@ -11,7 +11,7 @@
 
 ## 1. Prepare Kobiton configuration for executing automation testing
 
-#### Username
+**Username**
 1. Go to https://portal.kobiton.com/
 2. In the upper right hand corner, click on your name and in the drop down menu, click on Profile. 
 
@@ -21,13 +21,13 @@
 
 ![username](assets/username.png)
 
-#### API key
+**API key**
 1. Click on your name in the upper righthand corner again and select settings. 
 2. You should be able to find your API key under 'API Keys'. 
 
 ![api-key](assets/apikey.png)
 
-#### Desired caps
+**Desired caps**
 1. In the navigation bar at the top of the Kobiton website, select Devices. 
 
 ![devices](assets/devices.png)

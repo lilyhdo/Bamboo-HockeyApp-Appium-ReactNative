@@ -2,7 +2,7 @@
 
 ## Table of contents
 - [Prerequisites](#prerequisites)
-- [Create a project](#Create-a-project-and-link-to-GitHub)
+- [Create a project](#create-a-project-and-link-to-gitHub)
 
 ### Prerequisites
 
@@ -10,7 +10,7 @@
 
     > * If not installed, follow their [installation guide](https://confluence.atlassian.com/bamboo/getting-started-with-bamboo-289277283.html?_ga=2.95849887.246880307.1531709232-1995250601.1528082340) to download and setup Bamboo
 
-### Create a project and link to GitHub
+### Create a plan and link to GitHub
 
 _Follow the steps below to setup a Bamboo plan for GitHub._
 
